@@ -23,38 +23,40 @@ Things you may want to cover:
 
 * ...
 
-Books -- Organizing books based on a topic and which books to read first (for ex)
+Curricula -- Curriculum managing service, allows users to assemble collections of texts belonging to industry experts and famous
+people. View collections of curricula from other users and relate other curricula on the site to the user using their preferences
+or existing books or curricula.
 
 
-  User -- Model
-
-    login -- provide unique functionality
-    Collections
-    books thru collections
-
-
-  curriculums -- model
-    belongs to User
-    has_many subjects
-
-  Subject -- model
-
-    type
-    has_many books
-    belongs_to collection
+  Models
+  -----------
+    User: unique user profiles
+      authentication -- login, logout
+      has_many curricula
+      has_many subject(interests)
+      has_many books --- generate "sub" Curriculum based on user's books (i.e. Rome / caesar)
 
 
+   Curricula:
+      Description
+      belongs_to User
+      has_many books
 
-  Books -- model
+   Book:
+      title, Description, cover photo(?), author (separate model?), year, pages
+      has_many subjects
+      has_many Curriculum
 
-    content
-    title
-    rank
-    subject
 
+   Subject
+     name
+     has_many books
+     
 
 
 
-  expert rated sources
 
-  categories of subjects
+  Views
+  ----------
+
+    Login
