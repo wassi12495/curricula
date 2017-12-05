@@ -42,16 +42,32 @@ or existing books or curricula.
       belongs_to User
       has_many books
 
+      -----
+      join table!!!!
+
+      CurriculumBooks  
+        belongs_to curriculum
+        belongs_to book
+      -----
+
    Book:
       title, Description, cover photo(?), author (separate model?), year, pages
       has_many subjects
       has_many Curriculum
 
+      -----
+      join table!!!!
+      BookSubjects
+        belongs_to book
+        belongs_to subject
+      -----
+
+
 
    Subject
      name
      has_many books
-     
+
 
 
 

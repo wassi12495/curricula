@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# reset db
+Subject.destroy_all
+Book.destroy_all
+Curriculum.destroy_all
+BookSubject.destroy_all
+CurriculumBook.destroy_all
+
+# Build subjects
+Subject.create(name: "Rome")
+Subject.create(name: "Caesar")
+
+# Build books
+
+Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: "1968", publisher: "Addison-Wesley")
