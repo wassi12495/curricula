@@ -12,19 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20171205163014) do
 
-  create_table "book_subjects", force: :cascade do |t|
-    t.integer "book_id"
-    t.integer "subject_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
     t.text "description"
-    t.string "year"
+    t.integer "year"
     t.string "publisher"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +40,7 @@ ActiveRecord::Schema.define(version: 20171205163014) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

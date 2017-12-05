@@ -1,5 +1,6 @@
 <h1><%= @book.title%></h1>
-<h3>by <%= @book.author%></h3>
+<h3>by <%= @book.author%> - <%=link_to @book.subject.name, subject_path(@book.subject)%></h3>
 
-<%= @book.publisher%>
+Publisher: <%= @book.publisher%>
+<br>
 <%= @book.description%>

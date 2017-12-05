@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    #byebug
     @book = Book.find(params[:id])
   end
 
@@ -15,7 +16,10 @@ class BooksController < ApplicationController
   end
 
   def create
+    #byebug
     @book = Book.new(book_params)
+    @book.subject = Subject.find(params[:book][:subject_id])
+
     if @book.valid?
       @book.save
       redirect_to book_path(@book)

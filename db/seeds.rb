@@ -8,15 +8,20 @@
 
 # reset db
 Subject.destroy_all
-Book.destroy_all
-Curriculum.destroy_all
-BookSubject.destroy_all
-CurriculumBook.destroy_all
+# Book.destroy_all
+# Curriculum.destroy_all
+# BookSubject.destroy_all
+# CurriculumBook.destroy_all
 
 # Build subjects
-Subject.create(name: "Rome")
-Subject.create(name: "Caesar")
+Subject.create(name: "Computer Science")
+Subject.create(name: "Music")
+Subject.create(name: "Philosophy")
+Subject.create(name: "Art")
+Subject.create(name: "Fiction Lit")
+Subject.create(name: "History")
+Subject.create(name: "Psychology")
 
 # Build books
 
-Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: "1968", publisher: "Addison-Wesley")
+# Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: "1968", publisher: "Addison-Wesley")

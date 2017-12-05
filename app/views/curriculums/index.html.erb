@@ -1,0 +1,7 @@
+<h1>All Curricula </h1>
+
+<% @curricula.each do |curriculum|%>
+
+<li>"<%=link_to curriculum.title, curriculum_path(curricula) %>", by <%= curriculum.user.name%>   </li>
+
+<%end%>
