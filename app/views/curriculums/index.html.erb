@@ -3,6 +3,6 @@
   <!-- Page Content goes here -->
   <div class="container">
     <% @curricula.each do |curriculum|%>
-      <li>"<%=link_to curriculum.title, curriculum_path(curricula) %>", by <%= curriculum.user.name%>   </li>
+      <li>"<%=link_to curriculum.title, curriculum_path(curriculum) %>", by <%= curriculum.user.name%>   </li>
     <%end%>
   </div>

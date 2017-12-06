@@ -1,4 +1,5 @@
 class CurriculumsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
 
   def index
     @curricula = Curriculum.all
@@ -14,16 +15,17 @@ class CurriculumsController < ApplicationController
 
   def create
     @curriculum = Curriculum.create(curriculum_params)
+    @curriculum.user_id = session[:user_id]
     byebug
-    # if @curriculum.valid?
-      # @curriculum.save
+    if @curriculum.valid?
+       @curriculum.save
     params[:curriculum][:book_ids].each do |id|
         CurriculumBook.create(book_id: id, curriculum_id: @curriculum.id)
     end
     redirect_to curriculums_path
-    # else
-      # redirect_to new_curriculum_path
-    # end
+    else
+       redirect_to new_curriculum_path
+     end
   end
 
   def edit

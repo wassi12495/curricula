@@ -1,0 +1,24 @@
+<h1>Welcome to Curricula!</h1>
+
+
+<ul id="home-curriculums">
+
+  <% Curriculum.all.each do |curr|%>
+  <li><%= curr.title%> <br> <%= curr.user.name%></li>
+  <%end%>
+
+
+
+</ul>
+
+<ul id="home-books">
+
+</ul>
+
+<ul id="home-users">
+
+</ul>
+
+<ul id="home-subjects">
+
+</ul>

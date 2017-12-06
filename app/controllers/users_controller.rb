@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  skip_before_action :authorized, only: [:new, :create, :index]
+  skip_before_action :authorized, only: [:new, :create, :index, :show]
    def create
      @user = User.new(user_params)
      if @user.valid?

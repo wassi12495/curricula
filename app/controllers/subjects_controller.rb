@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
 
   def index
     @subjects = Subject.all
@@ -7,7 +8,7 @@ class SubjectsController < ApplicationController
   def show
 
     @subject = Subject.find(params[:id])
-    
+
   end
 
 end

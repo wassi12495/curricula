@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   delete "/sessions", to: "sessions#destroy", as: 'logout'
   get "/sessions", to: "sessions#destroy"
 
+  get "/", to: "home#index"
+
 
 
 
