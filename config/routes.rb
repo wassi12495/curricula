@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :curriculums
   resources :users
 
+
   get "signup", to: 'users#new', as: 'signup'
   get '/login', to: 'sessions#new', as: 'login'
   post "/sessions", to: "sessions#create", as: "sessions"
