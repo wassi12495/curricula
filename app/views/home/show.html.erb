@@ -1,1 +1,16 @@
-<h1><%= @user.name%></h1> 
+<h1><%= @user.name%></h1>
+
+<div class="divider"></div>
+<div class="section">
+  <h5>Curricula</h5>
+  <% @user.curriculums.each do |curr|%>
+  <li><%= curr.title%> </li>
+  <%= curr.description%>
+  <%end%>
+
+</div>
+<div class="divider">
+
+
+
+</div>
