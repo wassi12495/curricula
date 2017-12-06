@@ -3,17 +3,27 @@
   <head>
     <title>Curricula</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= link_to "Books", books_path%>
-    <%= link_to "Subjects", subjects_path%>
-    <%= link_to "Users", users_path%>
-    <%= link_to "Curriculum", curriculums_path%>
+    <nav>
+      <div class="nav-wrapper blue-grey darken-1">
+        <div class="container">
+        <ul id="nav-mobile" class="col s12 m4 l3">
+          <li><%= link_to "Books", books_path%></li>
+          <li><%= link_to "Subjects", subjects_path%></li>
+          <li><%= link_to "Users", users_path%></li>
+          <li><%= link_to "Curriculum", curriculums_path%></li>
+        </ul>
+      </div>
 
-    <%= yield %>
+    </nav>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
