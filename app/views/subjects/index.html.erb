@@ -1,5 +1,13 @@
-<h1>All Subjects</h1>
+<div class ="container">
+  <h1>All Subjects</h1>
+  <div class="row">
+    <% @subjects.each do |subject|%>
+      <div class="col s3">
+        <ul>
+          <li><%= link_to subject.name, subject_path(subject) %> </li><br>
+        </ul>
+      </div>
 
-<% @subjects.each do |subject|%>
-<li><%= link_to subject.name, subject_path(subject) %> </li>
-<%end%>
+    <%end%>
+  </div>
+</div>
