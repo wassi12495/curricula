@@ -6,5 +6,10 @@ class Book < ApplicationRecord
 
 
   validates :title, presence: true
+  validates :subject_id, presence: true
+
+  def curricula_count
+    self.curriculums.count
+  end
 
 end
