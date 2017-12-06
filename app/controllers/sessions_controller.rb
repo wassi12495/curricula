@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       else
 
        # sign in failed
-        flash[:message] = "Wrong username and password"
+        flash[:message] = "Wrong username or password"
         redirect_to login_path
 
      end

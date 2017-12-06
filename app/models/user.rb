@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :curriculums
 
   validates :first_name, presence: true
+  validates :username, presence:true
 
   def name
     "#{self.first_name}" + " #{self.last_name}"
