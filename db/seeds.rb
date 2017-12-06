@@ -13,6 +13,9 @@ Subject.destroy_all
 # BookSubject.destroy_all
 # CurriculumBook.destroy_all
 
+# Users
+User.create(username: "obama", password: "michelle", password_confirmation: "michelle", first_name: "Barack", last_name: "Obama")
+
 # Build subjects
 Subject.create(name: "Computer Science")
 Subject.create(name: "Music")
