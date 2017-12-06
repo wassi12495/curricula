@@ -2,23 +2,25 @@
 
 
 <ul id="home-curriculums">
-
+  <h3>Curricula</h3>
   <% Curriculum.all.each do |curr|%>
-  <li><%= curr.title%> <br> <%= curr.user.name%></li>
+    <li><%= curr.title%> -- <%= curr.user.name%></li>
   <%end%>
-
-
-
 </ul>
 
 <ul id="home-books">
-
+  <h3>Books</h3>
+  <% Book.all.each do |book|%>
+    <li>img -- <%= book.title%> -- <%= book.author%></li>
+  <%end%>
 </ul>
 
 <ul id="home-users">
+  <h3>Users</h3>
 
 </ul>
 
 <ul id="home-subjects">
+  <h3>Subjects</h3>
 
 </ul>
