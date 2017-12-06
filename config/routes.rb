@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/sessions", to: "sessions#destroy"
 
   get "/", to: "home#index"
+  get "/profile", to: "home#show", as: "profile"
 
 
 

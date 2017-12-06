@@ -22,6 +22,7 @@
             <div class="col s2">
               <ul id="nav-mobile">
               <% if logged_in? %>
+                  <li><%= link_to "Profile", profile_path%></li>
                   <li><%= link_to "Logout", logout_path%></li>
                 <%else%>
                   <li><%= link_to "Log In / Sign Up", login_path%></li>
