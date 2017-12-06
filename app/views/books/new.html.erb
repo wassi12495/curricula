@@ -7,30 +7,6 @@
       <ul>
       <%= form_for @book do |f|%>
 
-<<<<<<< HEAD
-        <%= f.label :title%>
-        <%= f.text_field :title%>
-        <br>
-        <%= f.label :author%>
-        <%= f.text_field :author%>
-        <br>
-        <%= f.label :year%>
-        <%= f.text_field :year%>
-        <br>
-        <%= f.label :publisher%>
-        <%= f.text_field :publisher%>
-        <br>
-        <%= f.label :description%>
-        <%= f.text_area :description%>
-
-        <br>
-        <%= f.label :subject %>
-        <%= f.collection_select(:subject_id, Subject.all, :id, :name)%>
-
-        <br>
-        <%= f.submit %>
-      <%end%>
-=======
       <%= f.label :title%>
       <%= f.text_field :title%>
       <br>
@@ -52,7 +28,6 @@
 
       <%= f.collection_radio_buttons(:subject_id, Subject.all, :id, :name)%>
       <br>
->>>>>>> 1c3565440ca0a460e8945a95d1f88c14ab6f81d2
 
       </ul>
     </div>
