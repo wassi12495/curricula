@@ -3,7 +3,7 @@
       <div class="col s12"></div>
 
       <div class="col s6">
-      <%= form_tag sessions_path do %>
+      <%= form_tag login_path do %>
         <h3>Returning users</h3>
         <%= label_tag :username %>
         <%= text_field_tag :username %>
@@ -13,19 +13,7 @@
       <%end%>
     </div>
     <div class="col s6">
-      <%= form_tag sessions_path do %>
       <h3>New user</h3>
-        <%= label_tag :first_name%>
-        <%= text_field_tag :first_name%>
-        <%= label_tag :last_name%>
-        <%= text_field_tag :last_name%>
-        <%= label_tag :username %>
-        <%= text_field_tag :username %>
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
-        <%= label_tag :password_confirmation%>
-        <%= password_field_tag :password_confirmation %>
-        <%= submit_tag "Sign Up" %>
-      <%end%>
+        <%=link_to "Sign Up", signup_path%>
     </div>
   </div>

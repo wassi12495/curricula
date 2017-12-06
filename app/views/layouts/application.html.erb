@@ -12,13 +12,21 @@
       <div class="nav-wrapper blue-grey darken-1">
           <div class="row">
             <div class="col s10">
-              <ul id="nav-mobile">
-                <li><%= link_to "Books", books_path%></li>
-                <li><%= link_to "Subjects", subjects_path%></li>
-                <li><%= link_to "Users", users_path%></li>
-                <li><%= link_to "Curriculum", curriculums_path%></li>
-              </ul>
+                <ul id="nav-mobile">
+                  <li><button class="dropbtn"><%= link_to "Books", books_path%></button></li>
+                  <div class="dropdown">
+                    <div class="dropdown-content">
+                      <%= link_to "Create new book", new_book_path%>
+                      <%= link_to "Subjects", subjects_path%>
+                    </div>
+                  </div>
+
+                  <li><%= link_to "Subjects", subjects_path%></li>
+                  <li><%= link_to "Users", users_path%></li>
+                  <li><%= link_to "Curriculum", curriculums_path%></li>
+                </ul>
             </div>
+
             <div class="col s2">
               <ul id="nav-mobile">
               <% if logged_in? %>
