@@ -4,3 +4,14 @@
 Publisher: <%= @book.publisher%>
 <br>
 <%= @book.description%>
+
+<nav>
+  <div class = "container">
+      <div class="nav-wrapper blue-grey darken-1">
+        <ul id="nav-mobile" class="left">
+          <li><%= link_to "Browse Subjects", subjects_path%></li>
+          <li><%= link_to "Create Book", new_book_path%></li>
+        </ul>
+      </div>
+    </div>
+</nav>
