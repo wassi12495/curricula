@@ -1,14 +1,16 @@
-<h1>Create New Curriculum</h1>
+<div class="container">
+  <h1>Create New Curriculum</h1>
 
-<ul>
-<%= form_for @curriculum do |f|%>
-<%= f.label :title%>
-<%= f.text_field :title%>
-<br>
-<%= f.label :description%>
-<%= f.text_field :description%>
-<br>
-<%=f.collection_check_boxes(:book_ids, Book.all, :id, :title)%>
-<br>
-<%= f.submit %>
-<%end%>
+  <ul>
+  <%= form_for @curriculum do |f|%>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+  <br>
+  <%= f.label :description%>
+  <%= f.text_field :description%>
+  <br>
+  <%=f.collection_check_boxes(:book_ids, Book.all, :id, :title)%>
+  <br>
+  <%= f.submit %>
+  <%end%>
+</div>
