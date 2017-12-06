@@ -17,9 +17,10 @@ class BooksController < ApplicationController
   end
 
   def create
-    #byebug
+    # byebug
     @book = Book.new(book_params)
     @book.subject = Subject.find(params[:book][:subject_id])
+
 
     if @book.valid?
       @book.save
@@ -38,7 +39,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :year, :publisher, :description, :subject_id)
+    params.require(:book).permit(:title, :author, :year, :publisher, :description, :subject_id, :img_url)
 
   end
 

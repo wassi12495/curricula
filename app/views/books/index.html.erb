@@ -11,11 +11,12 @@
 
 
 
+<div class="container">
+  <h1>All Books</h1>
 
-<h1>All Books</h1>
+  <% @books.each do |book|%>
 
-<% @books.each do |book|%>
+  <li>"<%=link_to book.title, book_path(book) %>", by <%= book.author%>    </li>
 
-<li>"<%=link_to book.title, book_path(book) %>", by <%= book.author%>    </li>
-
-<%end%>
+  <%end%>
+</div>

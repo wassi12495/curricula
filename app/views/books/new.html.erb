@@ -3,11 +3,11 @@
 
   <div class="row">
     <!-- <div class="col s12"></div> -->
-    <div class='col s6'><img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg></div>
     <div class="col s6">
       <ul>
       <%= form_for @book do |f|%>
 
+<<<<<<< HEAD
         <%= f.label :title%>
         <%= f.text_field :title%>
         <br>
@@ -30,8 +30,40 @@
         <br>
         <%= f.submit %>
       <%end%>
+=======
+      <%= f.label :title%>
+      <%= f.text_field :title%>
+      <br>
+      <%= f.label :author%>
+      <%= f.text_field :author%>
+      <br>
+      <%= f.label :year%>
+      <%= f.text_field :year%>
+      <br>
+
+      <%= f.label :publisher%>
+      <%= f.text_field :publisher%>
+      <br>
+      <%= f.label :description%>
+      <%= f.text_area :description%>
+      <br>
+      <%= f.label :subject %>
+      <br>
+
+      <%= f.collection_radio_buttons(:subject_id, Subject.all, :id, :name)%>
+      <br>
+>>>>>>> 1c3565440ca0a460e8945a95d1f88c14ab6f81d2
 
       </ul>
     </div>
+
+    <div class='col s6'>
+      <img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg><br>
+      <%=f.label "Image URL"%>
+      <%=f.text_field :img_url%>
+      <%= f.submit %>
+      <%end%>
+    </div>
+
   </div>
 </div>

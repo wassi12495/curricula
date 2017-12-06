@@ -1,18 +1,20 @@
-<h1><%= @book.title%></h1>
-<h3>by <%= @book.author%> - <%=link_to @book.subject.name, subject_path(@book.subject)%></h3>
-<%= @book.image%>
+  <nav>
+        <div class="nav-wrapper blue-grey darken-1">
+          <ul id="nav-mobile" class="left">
+            <li><%= link_to "Browse Subjects", subjects_path%></li>
+            <li><%= link_to "Create Book", new_book_path%></li>
+          </ul>
+        </div>
+  </nav>
+<div class = "container">
 
-Publisher: <%= @book.publisher%>
-<br>
-<%= @book.description%>
 
-<nav>
-  <div class = "container">
-      <div class="nav-wrapper blue-grey darken-1">
-        <ul id="nav-mobile" class="left">
-          <li><%= link_to "Browse Subjects", subjects_path%></li>
-          <li><%= link_to "Create Book", new_book_path%></li>
-        </ul>
-      </div>
-    </div>
-</nav>
+  <h1><%= @book.title%></h1>
+  <h3>by <%= @book.author%> - <%=link_to @book.subject.name, subject_path(@book.subject)%></h3>
+  Publisher: <%= @book.publisher%>
+  <br>
+  <%= @book.description%>
+
+  <img src= '<%=@book.img_url%>' >
+
+</div>
