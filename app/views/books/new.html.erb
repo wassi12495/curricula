@@ -3,7 +3,6 @@
 
   <div class="row">
     <!-- <div class="col s12"></div> -->
-    <div class='col s6'><img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg></div>
     <div class="col s6">
       <ul>
       <%= form_for @book do |f|%>
@@ -17,23 +16,29 @@
       <%= f.label :year%>
       <%= f.text_field :year%>
       <br>
+
       <%= f.label :publisher%>
       <%= f.text_field :publisher%>
       <br>
       <%= f.label :description%>
       <%= f.text_area :description%>
       <br>
-
-      <%= f.file_field :image %>
-      <br>
       <%= f.label :subject %>
-      <%= f.collection_select(:subject_id, Subject.all, :id, :name)%>
-
       <br>
-      <%= f.submit %>
-      <%end%>
+
+      <%= f.collection_radio_buttons(:subject_id, Subject.all, :id, :name)%>
+      <br>
 
       </ul>
     </div>
+
+    <div class='col s6'>
+      <img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg><br>
+      <%=f.label "Image URL"%>
+      <%=f.text_field :img_url%>
+      <%= f.submit %>
+      <%end%>
+    </div>
+
   </div>
 </div>
