@@ -1,12 +1,32 @@
+<div class="container">
+
+
 <h1><%=@subject.name%></h1>
 <h5>Number of Books: <%= @subject.book_count%></h5>
 
 <ul>
-  <% @subject.books.each do |book|%>
-<li>"<%= link_to book.title, book_path(book) %>", by <%=book.author%></li>
+  <div class="row">
 
+
+  <% @subject.books.each do |book|%>
+  <div class="col s3">
+      <ul>
+        <li>
+          <a href="<%=book_path(book)%>">
+            <div class="card-panel hoverable">
+              <div class="card-image">
+                <img class="responsive-img" src="<%=book.img_url%>">
+                <span class="card-title">"<%=book.title%>" -- <%= book.author%></span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
   <%end%>
+    </div>
 
 </ul>
+</div>
 
 <!-- print subject .books -->

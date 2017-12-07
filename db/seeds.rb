@@ -35,6 +35,8 @@ art_comp = Book.create(title: "The Art of Computer Programming", author: "Donald
 hamilton = Book.create(title: "Alexander Hamilton", author: "Ron Chernow", year: 2005, publisher: "Penguin Books", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51P1c42DyLL._SX322_BO1,204,203,200_.jpg")
 constitution = Book.create(title: "US Constitution", author: "James Maddison", year:  1789, publisher: "'Merica", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/613cMYch4lL._AC_UL320_SR272,320_.jpg")
 art_of_deal = Book.create(title: "Trump: The Art of the Deal", author: "Donald J. Trump", year:  2015, publisher: "Ballantine Books", subject_id: fic.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51%2BB8cqHZ8L._SX322_BO1,204,203,200_.jpg")
+dec_ind = Book.create(title: "The Declaration of Independence", author: "Thomas Jefferson et al.", year:  1776, publisher: "Continental Congress", subject_id: history.id, img_url: "https://www.loc.gov/rr/program/bib/ourdocs/Images/declaration.jpg")
+change = Book.create(title: "Change We Can Believe In", author: "Barack Obama", year:  2008, publisher: "Random House", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51g2iEMBs4L._SX320_BO1,204,203,200_.jpg")
 
 
 
@@ -51,3 +53,5 @@ jeff_c1 = Curriculum.create(title: "Entrepreneurship ", description: "An Introdu
 CurriculumBook.create(book_id:hamilton.id, curriculum_id: obama_c1.id)
 CurriculumBook.create(book_id:constitution.id, curriculum_id: obama_c1.id)
 CurriculumBook.create(book_id:art_of_deal.id, curriculum_id: obama_c1.id)
+CurriculumBook.create(book_id:dec_ind.id, curriculum_id: obama_c1.id)
+CurriculumBook.create(book_id:change.id, curriculum_id: obama_c1.id)
