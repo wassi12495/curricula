@@ -5,14 +5,21 @@
 
   <h6>-<%= link_to @curriculum.user.name, user_path(@curriculum.user)%></h6>
 
+
+
+
   <form action='<%=add_to_lib_path%>' method="get">
     <input type="hidden" name="curriculum_id" value='<%=@curriculum.id%>'>
     <button class="btn waves-effect waves-light" type="submit" name="action" >
-      
-    <i class="material-icons right">Add to Library</i>
+      <i class="material-icons right">
+        <% if @curriculum.followed?(session[:user_id])%>
+            <%="Unfollow"%>
+        <%else%>
+            <%="Add to Library"%>
+        <%end%>
+      </i>
     </button>
   </form>
-
 
   <div class="row">
     <%@curriculum.books.each do |book|%>

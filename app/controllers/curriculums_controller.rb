@@ -8,6 +8,7 @@ class CurriculumsController < ApplicationController
 
   def show
     @curriculum = Curriculum.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def new
@@ -44,6 +45,7 @@ class CurriculumsController < ApplicationController
     redirect_to curriculum_path(@curriculum)
 
   end
+
 
   private
 
