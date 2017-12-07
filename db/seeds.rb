@@ -21,13 +21,13 @@ greg = User.create(username: "Greg", password: "123", password_confirmation: "12
 
 
 # Build subjects
-cs = Subject.create(name: "Computer Science")
-music = Subject.create(name: "Music")
-phil = Subject.create(name: "Philosophy")
-art = Subject.create(name: "Art")
-fic = Subject.create(name: "Fiction Lit")
-history = Subject.create(name: "History")
-psych = Subject.create(name: "Psychology")
+cs = Subject.create(name: "Computer Science", img_url: "https://lh4.googleusercontent.com/gtFDaHlRdqczafvDSWQ9WduIxHkMIZt2T3s-fIE2A-WhF9mnlFSavfObi-P0NOVr_rcQSfpDvQkLPehwiiSHQ-LWGFo0VM0FbDFRhMn5VxVuf5sZyc0kB3KXNm-_yft5mbYAQIlR")
+music = Subject.create(name: "Music", img_url:"https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/music-staff_b1d89oyes__F0000.png")
+phil = Subject.create(name: "Philosophy", img_url:"http://i0.kym-cdn.com/photos/images/original/001/153/164/9d7.jpg")
+art = Subject.create(name: "Art", img_url:"http://pawprintnews.com/wp-content/uploads/2016/09/Art.jpg")
+fic = Subject.create(name: "Fiction Lit", img_url: "https://f.fwallpapers.com/images/science-fiction.jpg")
+history = Subject.create(name: "History", img_url:"https://www.conncoll.edu/media/major-images/History.jpg")
+psych = Subject.create(name: "Psychology", img_url:"https://www.timeshighereducation.com/sites/default/files/istock-500696260.jpg")
 
 # Build books
 

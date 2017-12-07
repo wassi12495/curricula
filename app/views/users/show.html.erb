@@ -13,7 +13,7 @@
                     <a href="<%=curriculum_path(curriculum)%>">
                       <div class="card-panel hoverable">
                         <div class="card-image">
-                            <img class="responsive-img" src="<%=curriculum.books.first.img_url%>">
+                            <img class="responsive-img" src="<%if curriculum.books.empty?%><%=%><%else%><%=curriculum.books.first.img_url%><%end%>">
                         </div>
                         <span class="card-title"><%=curriculum.title%></span>
 
