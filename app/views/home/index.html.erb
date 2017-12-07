@@ -42,7 +42,7 @@
                   <div class="card-panel hoverable">
                     <div class="card-image">
                       <!-- image should go here -->
-                      <img class="responsive-img" src="<%=curriculum.img_url%>">
+                      <img class="responsive-img" src="<%if curriculum.books.empty?%><%=%><%else%><%=curriculum.books.first.img_url%><%end%>">
 
                       <span class="card-title"><%=curriculum.title%></span>
                     </div>
