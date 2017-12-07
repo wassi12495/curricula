@@ -1,0 +1,36 @@
+<div class="section">
+  <div class="container">
+    <h3><%= @curriculum.title%></h3>
+    <div class="row">
+      <% @curriculum.books.each do |book|%>
+        <div class="col s3">
+            <ul>
+              <li>
+                <a href="<%=book_path(book)%>">
+                  <div class="card-panel hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="<%=book.img_url%>">
+                      <span class="card-title">"<%=book.title%>" -- <%= book.author%></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <%end%>
+      </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="section">
+
+  <div class="container">
+    <%=form_for @curriculum do |f|%>
+      <%=f.collection_check_boxes(:book_ids, @books, :id, :title)%>
+      <%=f.submit%>
+    <%end%>
+
+
+  </div>
+
+</div>

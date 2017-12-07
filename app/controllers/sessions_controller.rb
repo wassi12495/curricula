@@ -12,13 +12,12 @@ class SessionsController < ApplicationController
         # you are who you say you are
 
         session[:user_id] = user.id
-        flash[:message] = "Welcome #{user.username}"
-        redirect_to books_path
+        redirect_to profile_path
       else
-
+        #byebug
        # sign in failed
-        flash[:message] = "Wrong username or password"
-        redirect_to login_path
+       flash.now[:message] = "Invalid Login"
+       render 'new'
 
      end
     end
@@ -26,7 +25,7 @@ class SessionsController < ApplicationController
 
    def destroy
       session[:user_id] = nil
-      redirect_to books_path
+      redirect_to home_path
    end
 
 end
