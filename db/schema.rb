@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20171207224740) do
     t.string "img_url"
   end
 
-  create_table "followers", force: :cascade do |t|
+  create_table "follows", force: :cascade do |t|
     t.integer "user_id"
     t.integer "curriculum_id"
   end
