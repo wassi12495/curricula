@@ -30,13 +30,13 @@ class CurriculumsController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   private
 
   def curriculum_params
-    params.require(:curriculum).permit(:title, :description)
+    params.require(:curriculum).permit(:title, :description, :user_id)
   end
 
 end
