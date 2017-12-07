@@ -5,7 +5,9 @@ class HomeController < ApplicationController
 
   def index
 
-
+    @users = User.all
+    @curricula = Curriculum.all
+    @books = Book.all
   end
 
   def add_curriculum_to_lib
