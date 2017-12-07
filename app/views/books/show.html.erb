@@ -14,8 +14,14 @@
     <h1><%= @book.title%></h1>
     <h3>by <%= @book.author%> - <%=link_to @book.subject.name, subject_path(@book.subject)%></h3>
     Publisher: <%= @book.publisher%>
+
     <br>
+    Description:
     <%= @book.description%>
+    <br>
+    Book used in: <%@book.curriculums.each do |curr|%>
+    <%= link_to curr.title, curriculum_path(curr)%>
+    <%end%>
   </div>
   <div class="col s6">
     <img class="responsive-img" src="<%=@book.img_url%>">
