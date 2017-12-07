@@ -1,16 +1,26 @@
+<div class="container">
+
 
   <div class='row'>
-    <div class='col s2'>
-      <ul>
-        <li><img src="http://internetbusinessmastermind.com/wp-content/uploads/barack-obama-official.jpg" alt="" class="circle responsive-img"></li>
-        <li><img src="https://ffbsccn.files.wordpress.com/2013/08/jeffbezosceo_lg_jpg_280x280_crop_q95-1.jpg" alt="" class="circle responsive-img"></li>
-        <li><img src="https://www.looktothestars.org/photo/8354-elon-musk/story_half_width.jpg" alt="" class="circle responsive-img"></li>
-      </ul>
-    </div>
-    <div class='col s10'>
+    <!-- <%@users.each do |user|%> -->
+      <div class='col s12'>
+        <ul>
+          <li>
+            <div class="card-panel hoverable">
+              <div class="card-image">
+                <ul class="col s3">
+                  <img src="<%=user.img_url%>" class="circle responsice-img">
+
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <!-- <%end%> -->
+    <div class='col s12'>
       <h4>Explore top users!</h4>
-
-
 
     </div>               <!-- notice the "circle" class -->
   </div>
+</div>
