@@ -1,11 +1,23 @@
-<h1><%= @curriculum.title%></h1>
 
-<% @curriculum.books.each do |book|%>
-<ul>
-<li> <%= link_to book.title, book_path(book) %> -- <%= book.author%></li>
-Description: <%= book.description%>
-
-<img src="<%=book.img_url%>" alt="">
-</ul>
-
-<%end%>
+<div class="container">
+  <h1><%=@curriculum.title%></h1>
+  <div class="row">
+    <%@curriculum.books.each do |book|%>
+      <div class="col s3">
+          <ul>
+            <li>
+              <a href="<%=book_path(book)%>">
+                <div class="card-panel hoverable">
+                  <div class="card-image">
+                    <img class="responsive-img" src="<%=book.img_url%>">
+                    <span class="card-title"><%=book.title%></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <%end%>
+    </div>
+  </div>
+</div>

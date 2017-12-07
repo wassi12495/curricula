@@ -4,7 +4,14 @@
     <% @subjects.each do |subject|%>
       <div class="col s3">
         <ul>
-          <div class="card-panel hoverable"><li><%= link_to subject.name, subject_path(subject) %> </li>><br>
+            <a href="<%=subject_path(subject)%>">
+              <div class="card-panel hoverable"><br>
+                <div class="card-image">
+                  <img src="images/computer_science_img1.jpg">
+                  <span class="card-title"><%=subject.name%></span>
+                </div>
+              </div>
+            </a>
         </ul>
       </div>
     <%end%>
