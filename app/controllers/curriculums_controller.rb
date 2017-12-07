@@ -29,6 +29,7 @@ class CurriculumsController < ApplicationController
   end
 
   def edit
+    
   end
 
   private
