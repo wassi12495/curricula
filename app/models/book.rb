@@ -12,4 +12,8 @@ class Book < ApplicationRecord
     self.curriculums.count
   end
 
+
+
+
+
 end

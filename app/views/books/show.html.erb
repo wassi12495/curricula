@@ -20,7 +20,8 @@
     <%= @book.description%>
     <br>
     Book used in: <%@book.curriculums.each do |curr|%>
-    <%= link_to curr.title, curriculum_path(curr)%>
+    <li> <%= link_to curr.title, curriculum_path(curr)%> </li>
+
     <%end%>
   </div>
   <div class="col s6">
