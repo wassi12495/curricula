@@ -1,26 +1,86 @@
-<h1>Welcome to Curricula!</h1>
+<div class="container">
+  <h1>Welcome to Curricula!</h1>
+
+  <div class="section">
+    <h4>Trending books</h3>
+    <!-- Top users -->
+    <ul>
+      <div class="row">
+      <% @books[0..3].each do |book|%>
+        <div class="col s3">
+            <ul>
+              <li>
+                <a href="<%=book_path(book)%>">
+                  <div class="card-panel hoverable">
+                    <div class="card-image">
+                      <img class="responsive-img" src="<%=book.img_url%>">
+                      <span class="card-title">"<%=book.title%>" -- <%= book.author%></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <%end%>
+      </div>
+
+    </ul>
+    </div>
+
+  <div class='divider'></div>
+  <div class='section'>
+    <h4>Trending curricula</h3>
+
+    <!-- Top curricula -->
+    <ul>
+      <div class="row">
+      <% @curricula[0..3].each do |curriculum|%>
+        <div class="col s3">
+            <ul>
+              <li>
+                <a href="<%=curriculum_path(curriculum)%>">
+                  <div class="card-panel hoverable">
+                    <div class="card-image">
+                      <!-- image should go here -->
+                      <img class="responsive-img" src="<%=curriculum.img_url%>">
+
+                      <span class="card-title"><%=curriculum.title%></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <%end%>
+      </div>
+    </ul>
+  </div>
+  <div class='divider'></div>
+  <div class='section'>
+    <!-- Top users -->
+    <ul>
+      <div class="row">
+      <% @users[0..3].each do |user|%>
+        <div class="col s3">
+            <ul>
+              <li>
+                <a href="<%=user_path(user)%>">
+                  <div class="card-panel hoverable">
+                    <div class="card-image">
+                      <!-- image should go here -->
+                      <img class="responsive-img" src="<%=user.img_url%>">
+
+                      <span class="card-title"><%=user.name%>></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <%end%>
+      </div>
+    </ul>
 
 
-<ul id="home-curriculums">
-  <h3>Curricula</h3>
-  <% Curriculum.all.each do |curr|%>
-    <li><%= curr.title%> -- <%= curr.user.name%></li>
-  <%end%>
-</ul>
-
-<ul id="home-books">
-  <h3>Books</h3>
-  <% Book.all.each do |book|%>
-    <li>img -- <%= book.title%> -- <%= book.author%></li>
-  <%end%>
-</ul>
-
-<ul id="home-users">
-  <h3>Users</h3>
-
-</ul>
-
-<ul id="home-subjects">
-  <h3>Subjects</h3>
-
-</ul>
+  </div>
+</div>

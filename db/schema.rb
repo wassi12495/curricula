@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171207224740) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "follows", force: :cascade do |t|

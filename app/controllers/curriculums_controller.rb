@@ -50,7 +50,7 @@ class CurriculumsController < ApplicationController
   private
 
   def curriculum_params
-    params.require(:curriculum).permit(:title, :description, :user_id)
+    params.require(:curriculum).permit(:title, :description, :user_id, :img_url)
   end
 
 end

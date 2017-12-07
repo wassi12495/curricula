@@ -17,14 +17,22 @@
         <div class="col s3">
             <ul>
               <li>
-                <a href="<%=curriculum_path(curriculum)%>">
-                  <div class="card-panel hoverable">
-                    <div class="card-image">
-                      <img src="images/computer_science_img1.jpg">
-                      <span class="card-title"><%=curriculum.title%></span>
+
+                  <div class="card" style=:overflow>
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="<%=curriculum.img_url%>">
+                    </div>
+
+                    <div class="card-content">
+                      <span class="card-title white-text text-darken-4"><%=curriculum.title%><i class="material-icons right"></i></span>
+                    </div>
+
+                    <div class="card-reveal" style="display: none; transform: translateY(-100px);">
+                      <span class="card-title white-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                      <p>Here is some more information about this product that is only revealed once clicked on.</p>
                     </div>
                   </div>
-                </a>
+
               </li>
             </ul>
           </div>
