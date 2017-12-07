@@ -1,3 +1,6 @@
+<div class="container">
+
+
 <h1><%= @user.name%></h1>
 
 <div class="divider"></div>
@@ -9,8 +12,32 @@
   <%end%>
 
 </div>
-<div class="divider">
+<div class="divider"></div>
+  <div class="section">
+
+    <h5>Followed Curricula</h5>
+    <div class="row">
 
 
+    <%@user.follows.each do |follow|%>
+     <div class="col s3">
+      <% curriculum = Curriculum.find(follow.curriculum_id)%>
 
+          <ul>
+            <li>
+              <a href="<%=curriculum_path(curriculum)%>">
+                <div class="card hoverable">
+                  <div class="card-image">
+                      <img class="responsive-img" src="<%if curriculum.books.empty?%><%=%><%else%><%=curriculum.books.first.img_url%><%end%>">
+                  </div>
+                  <span class="card-title"><%=curriculum.title%></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      <%end%>
+    </div>
+
+  </div>
 </div>
