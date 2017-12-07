@@ -32,6 +32,9 @@ psych = Subject.create(name: "Psychology")
 
 art_comp = Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: 1968, publisher: "Addison-Wesley", subject_id: cs.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51sS0cybQKL._AC_UL320_SR214,320_.jpg")
 hamilton = Book.create(title: "Alexander Hamilton", author: "Ron Chernow", year: 2005, publisher: "Penguin Books", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51P1c42DyLL._SX322_BO1,204,203,200_.jpg")
+constitution = Book.create(title: "US Constitution", author: "James Maddison", year:  1789, publisher: "'Merica", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/613cMYch4lL._AC_UL320_SR272,320_.jpg")
+art_of_deal = Book.create(title: "Trump: The Art of the Deal", author: "Donald J. Trump", year:  2015, publisher: "Ballantine Books", subject_id: fic.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51%2BB8cqHZ8L._SX322_BO1,204,203,200_.jpg")
+
 
 
 
@@ -43,3 +46,5 @@ obama_c1 = Curriculum.create(title: "Presidential History", description: "A deep
 #  Build Curriculum book links
 
 CurriculumBook.create(book_id:hamilton.id, curriculum_id: obama_c1.id)
+CurriculumBook.create(book_id:constitution.id, curriculum_id: obama_c1.id)
+CurriculumBook.create(book_id:art_of_deal.id, curriculum_id: obama_c1.id)
