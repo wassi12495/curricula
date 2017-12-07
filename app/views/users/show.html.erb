@@ -4,10 +4,30 @@
     <div class="col s6">
       <h2><%=@user.name%></h2><br>
       <p><%=@user.biography%></p>
+
+
+          <%@user.curriculums.each do |curriculum|%>
+            <div class="col s2">
+                <ul>
+                  <li>
+                    <a href="<%=curriculum_path(curriculum)%>">
+                      <div class="card-panel hoverable">
+                        <div class="card-image">
+                          <img class="responsive-img" src="<%=book.img_url%>">
+                          <span class="card-title"><%=curriculum.name%>></span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            <%end%>
+          </div>
     </div>
 
     <div class="col s6">
-      <img src = "">
+      <img src = "<%=@user.img_url%>">
+      <img src = "https://i.pinimg.com/originals/88/c6/11/88c611cabbb02028d73aeb54cce52acf.jpg">
     </div>
 
   </div>
