@@ -3,6 +3,7 @@ class CurriculumsController < ApplicationController
 
   def index
     @curricula = Curriculum.all
+
   end
 
   def show
@@ -16,7 +17,7 @@ class CurriculumsController < ApplicationController
   def create
     @curriculum = Curriculum.create(curriculum_params)
     @curriculum.user_id = session[:user_id]
-    byebug
+    # byebug
     if @curriculum.valid?
        @curriculum.save
     params[:curriculum][:book_ids].each do |id|
