@@ -6,15 +6,30 @@
               <li><%= link_to "Edit Curriculum", new_book_path%></li>
           </ul>
         </nav>
-    </div>
+      </div>
 </div>
 
   <!-- Page Content goes here -->
+
   <div class="container">
     <h1>All Curricula </h1>
-
-    <% @curricula.each do |curriculum|%>
-      <li>"<%=link_to curriculum.title, curriculum_path(curriculum) %>"</li>
-      <%= curriculum.user.name%>
-    <%end%>
+    <div class="row">
+      <%@curricula.each do |curriculum|%>
+        <div class="col s3">
+            <ul>
+              <li>
+                <a href="<%=curriculum_path(curriculum)%>">
+                  <div class="card-panel hoverable">
+                    <div class="card-image">
+                      <img src="images/computer_science_img1.jpg">
+                      <span class="card-title"><%=curriculum.title%></span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <%end%>
+      </div>
+    </div>
   </div>
