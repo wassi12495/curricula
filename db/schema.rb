@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20171207201641) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "followers", force: :cascade do |t|
+  create_table "follows", force: :cascade do |t|
     t.integer "user_id"
     t.integer "curriculum_id"
   end

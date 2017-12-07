@@ -14,9 +14,13 @@ class HomeController < ApplicationController
     @curr = Curriculum.find(params[:curriculum_id])
     user = User.find(@user_id)
     if @curr.followed?(@user_id)
-      user.followers.where(curriculum_id: @curr_id).destroy
+
+      to_delete = Follow.where(curriculum_id: @curr.id, user_id: @user_id)
+      
+      Follow.delete(to_delete)
+      redirect_to curriculum_path(params[:curriculum_id])
     else
-      Follower.create(user_id: @user_id, curriculum_id: @curr.id)
+      Follow.create(user_id: @user_id, curriculum_id: @curr.id)
       redirect_to curriculum_path(params[:curriculum_id])
     end
   end

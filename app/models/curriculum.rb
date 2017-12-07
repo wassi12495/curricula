@@ -1,7 +1,7 @@
 class Curriculum < ApplicationRecord
 
   belongs_to :user
-  has_many :followers
+  has_many :follows
   has_many :curriculum_books
   has_many :books, through: :curriculum_books
 
@@ -10,14 +10,11 @@ class Curriculum < ApplicationRecord
 
   def followed?(user_id)
 
-      @user_id = user_id
-      user = User.find(@user_id)
-      byebug
-      if user.followers.where(curriculum_id: self.id)
-        true
-      else
+      user = User.find(user_id)
+      if Follow.where(user_id: user_id, curriculum_id: self.id).empty?
         false
-
+      else
+        true
       end
   end
 
