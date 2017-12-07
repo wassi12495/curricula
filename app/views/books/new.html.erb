@@ -7,38 +7,39 @@
       <ul>
       <%= form_for @book do |f|%>
 
-      <%= f.label :title%>
-      <%= f.text_field :title%>
-      <br>
-      <%= f.label :author%>
-      <%= f.text_field :author%>
-      <br>
-      <%= f.label :year%>
-      <%= f.text_field :year%>
-      <br>
+        <%= f.label :title%>
+        <%= f.text_field :title%>
+        <br>
+        <%= f.label :author%>
+        <%= f.text_field :author%>
+        <br>
+        <%= f.label :year%>
+        <%= f.text_field :year%>
+        <br>
 
-      <%= f.label :publisher%>
-      <%= f.text_field :publisher%>
-      <br>
-      <%= f.label :description%>
-      <%= f.text_area :description%>
-      <br>
-      <%= f.label :subject %>
-      <br>
+        <%= f.label :publisher%>
+        <%= f.text_field :publisher%>
+        <br>
+        <%= f.label :description%>
+        <%= f.text_area :description%>
+        <br>
+        <%= f.label :subject %>
+        <br>
 
-      <%= f.collection_radio_buttons(:subject_id, Subject.all, :id, :name)%>
-      <br>
+        <%= f.collection_radio_buttons(:subject_id, Subject.all, :id, :name)%>
+        <br>
 
       </ul>
     </div>
 
-    <div class='col s6'>
-      <img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg><br>
-      <%=f.label "Image URL"%>
-      <%=f.text_field :img_url%>
+      <div class='col s6'>
+        <img src=https://images-na.ssl-images-amazon.com/images/I/51SNYB4C5HL._SX258_BO1,204,203,200_.jpg><br>
+        <%=f.label "Image URL"%>
+        <%=f.text_field :img_url%>
+
+      </div>
       <%= f.submit %>
-      <%end%>
-    </div>
+    <%end%>
 
   </div>
 </div>

@@ -30,6 +30,18 @@ class CurriculumsController < ApplicationController
   end
 
   def edit
+    @curriculum = Curriculum.find(params[:id])
+    @books = Book.all.select do |book|
+      !@curriculum.books.include?(book)
+    end
+  end
+
+  def update
+    @curriculum = Curriculum.find(params[:id])
+    params[:curriculum][:book_ids].each do |book|
+      CurriculumBook.create(book_id: book, curriculum_id:@curriculum.id)
+    end
+    redirect_to curriculum_path(@curriculum)
 
   end
 
