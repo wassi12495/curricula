@@ -13,14 +13,12 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-
   end
 
   def create
     # byebug
     @book = Book.new(book_params)
     @book.subject = Subject.find(params[:book][:subject_id])
-
 
     if @book.valid?
       @book.save

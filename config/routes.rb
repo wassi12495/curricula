@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get "/", to: "home#index"
   get "/profile", to: "home#show", as: "profile"
+  get '/add_to_lib', to: "home#add_curriculum_to_lib", as: "add_to_lib"
+  get '/library', to: "home#curriculum_library", as: "library"
 
 
 
