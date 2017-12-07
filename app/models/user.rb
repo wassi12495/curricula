@@ -8,4 +8,8 @@ class User < ApplicationRecord
   def name
     "#{self.first_name}" + " #{self.last_name}"
   end
+
+  def curriculum_count
+    self.curriculums.count
+  end
 end

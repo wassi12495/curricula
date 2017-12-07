@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.find_by(first_name:"Barack")
     @users = User.all
   end
 

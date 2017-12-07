@@ -2,22 +2,32 @@
 
 
   <div class='row'>
-    <!-- <%@users.each do |user|%> -->
-      <div class='col s12'>
-        <ul>
-          <li>
-            <div class="card-panel hoverable">
-              <div class="card-image">
-                <ul class="col s3">
-                  <img src="<%=user.img_url%>" class="circle responsice-img">
+    <%@users.each do |user|%>
+      <ul>
+        <div class='col s12'>
+            <li>
+              <a href="<%=user_path(user)%>">
+                <div class="card horizontal hoverable white">
+                  <div class="card-image">
+                    <img src="<%=user.img_url%>" class="circle responsice-img">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-title">
+                      <span class="black-text"><%=user.name%></span>
+                    </div>
+                    <div class="card-content">
+                      <span class="black-text">Curricula Created:<%=user.curriculum_count%></span>
+                      <br> 
+                      <span class ="black-text">Bio: <%=user.biography%></span>
 
-                </ul>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <!-- <%end%> -->
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+        </div>
+      </ul>
+    <%end%>
     <div class='col s12'>
       <h4>Explore top users!</h4>
 
