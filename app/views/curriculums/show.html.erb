@@ -1,0 +1,9 @@
+<%= @curriculum.title%>
+
+<% @curriculum.books.each do |book|%>
+<ul>
+<li> <%= book.title %> -- <%= book.author%></li>
+<img src="<%=book.img_url%>" alt="">
+</ul>
+
+<%end%>
