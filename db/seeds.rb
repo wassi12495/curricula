@@ -30,10 +30,16 @@ psych = Subject.create(name: "Psychology")
 
 # Build books
 
-art_comp = Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: "1968", publisher: "Addison-Wesley", subject_id: cs.id)
+art_comp = Book.create(title: "The Art of Computer Programming", author: "Donald Knuth", year: 1968, publisher: "Addison-Wesley", subject_id: cs.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51sS0cybQKL._AC_UL320_SR214,320_.jpg")
+hamilton = Book.create(title: "Alexander Hamilton", author: "Ron Chernow", year: 2005, publisher: "Penguin Books", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51P1c42DyLL._SX322_BO1,204,203,200_.jpg")
 
 
 
 # Build Curriculum
 
 obama_c1 = Curriculum.create(title: "Presidential History", description: "A deep dive into the history of the United States Presidency.", user_id: obama.id)
+
+
+#  Build Curriculum book links
+
+CurriculumBook.create(book_id:hamilton.id, curriculum_id: obama_c1.id)
