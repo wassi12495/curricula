@@ -41,6 +41,8 @@ art_of_deal = Book.create(title: "Trump: The Art of the Deal", author: "Donald J
 # Build Curriculum
 
 obama_c1 = Curriculum.create(title: "Presidential History", description: "A deep dive into the history of the United States Presidency.", user_id: obama.id)
+jeff_c1 = Curriculum.create(title: "Entrepreneurship ", description: "An Introduction to Entrepreneurship.", user_id: jeff.id)
+
 
 
 #  Build Curriculum book links
