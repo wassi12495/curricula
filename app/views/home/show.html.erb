@@ -6,10 +6,21 @@
 <div class="divider"></div>
 <div class="section">
   <h5>Curricula</h5>
-  <% @user.curriculums.each do |curr|%>
-  <li><%= curr.title%> </li>
-  <%= curr.description%>
-  <%end%>
+  <div class="row">
+    <div class="col s3">
+      <% @user.curriculums.each do |curr|%>
+      <a href="<%=curriculum_path(curr)%>">
+        <div class="card hoverable">
+          <div class="card-image">
+              <img class="responsive-img" src="<%if curr.books.empty?%><%=%><%else%><%=curr.books.first.img_url%><%end%>">
+          </div>
+          <span class="card-title"><%=curr.title%></span>
+        </div>
+      </a>
+    
+      <%end%>
+    </div>
+  </div>
 
 </div>
 <div class="divider"></div>
