@@ -14,10 +14,10 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to profile_path
       else
-
+        #byebug
        # sign in failed
-        flash[:message] = "Wrong username or password"
-        redirect_to login_path
+       flash.now[:message] = "Invalid Login"
+       render 'new'
 
      end
     end

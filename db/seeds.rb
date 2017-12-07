@@ -9,9 +9,9 @@
 # reset db
 User.destroy_all
 Subject.destroy_all
- Book.destroy_all
- Curriculum.destroy_all
- CurriculumBook.destroy_all
+Book.destroy_all
+Curriculum.destroy_all
+CurriculumBook.destroy_all
 
 # Users
 obama = User.create(username: "obama", password: "michelle", password_confirmation: "michelle", first_name: "Barack", last_name: "Obama", img_url:"http://internetbusinessmastermind.com/wp-content/uploads/barack-obama-official.jpg", biography: "Barack Hussein Obama II is an American politician who served as the 44th President of the United States from 2009 to 2017.")

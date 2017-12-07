@@ -18,12 +18,10 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.subject = Subject.find(params[:book][:subject_id])
-    byebug
     if @book.save
       redirect_to book_path(@book)
     else
-      redirect_to new_book_path
+      render 'new'
     end
 
   end
