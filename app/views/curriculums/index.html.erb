@@ -15,21 +15,18 @@
     <div class="row">
       <%@curricula.each do |curriculum|%>
         <div class="col s3">
-            <ul>
-              <li>
-                <div class="card indigo lighten-5">
-                  <div class="card-content white-text">
-                    <span class="card-title"><%=curriculum.title%></span>
-                      <p><img class="responsive-img" src='<%=curriculum.img_url%>'</p>
-                  </div>
-                <div class="card-action">
-                <%=link_to "View Books", curriculum_path(curriculum)%>
-                </div>
-          </div>
-
-
-              </li>
-            </ul>
+              <ul>
+                <li>
+                  <a href="<%=curriculum_path(curriculum)%>">
+                    <div class="card-panel hoverable indigo lighten-5">
+                      <div class="card-image">
+                        <img class="responsive-img" src="<%=curriculum.img_url%>">
+                        <span class="card-title"><%=curriculum.title%></span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
           </div>
           <%end%>
       </div>

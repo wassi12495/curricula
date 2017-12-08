@@ -4,14 +4,16 @@
     <% @subjects.each do |subject|%>
       <div class="col s3">
         <ul>
+          <li>
             <a href="<%=subject_path(subject)%>">
-              <div class="card-panel hoverable"><br>
+              <div class="card-panel hoverable indigo lighten-5" <br>
                 <div class="card-image">
-                  <img src="<%=subject.img_url%>" class="responsive-img">
+                  <img src="<%=subject.img_url%>" class="responsive-img" style="height:110px;  overflow:hidden" >
                   <span class="card-title"><%=subject.name%></span>
                 </div>
               </div>
             </a>
+          </li>
         </ul>
       </div>
     <%end%>

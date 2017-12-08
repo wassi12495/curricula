@@ -11,7 +11,7 @@
                 <ul>
                   <li>
                     <a href="<%=curriculum_path(curriculum)%>">
-                      <div class="card-panel hoverable">
+                      <div class="card-panel hoverable indigo lighten-5">
                         <div class="card-image">
                             <img class="responsive-img" src="<%if curriculum.books.empty?%><%=%><%else%><%=curriculum.books.first.img_url%><%end%>">
                         </div>
@@ -26,7 +26,7 @@
           </div>
 
           <div class="col s6">
-            <img class="circle responsive-img" src = "<%=@user.img_url%>">
+            <img class="circle responsive-img" style="height:250px  overflow:hidden" src ="<%=@user.img_url%>">
           </div>
     </div>
 

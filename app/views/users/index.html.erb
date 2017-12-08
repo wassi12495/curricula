@@ -7,9 +7,9 @@
         <div class='col s12'>
             <li>
               <a href="<%=user_path(user)%>">
-                <div class="card horizontal hoverable white">
+                <div class="card horizontal hoverable indigo lighten-5">
                   <div class="card-image">
-                    <img src="<%=user.img_url%>" class="circle responsice-img">
+                    <img src="<%=user.img_url%>" class="circle responsice-img" style="height:200px;  overflow:hidden">
                   </div>
                   <div class="card-stacked">
                     <div class="card-title">
@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-content">
                       <span class="black-text">Curricula Created:<%=user.curriculum_count%></span>
-                      <br> 
+                      <br>
                       <span class ="black-text">Bio: <%=user.biography%></span>
 
                     </div>

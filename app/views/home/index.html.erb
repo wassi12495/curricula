@@ -2,16 +2,17 @@
   <h1>Welcome to Curricula!</h1>
 
   <div class="section">
-    <h4>Trending books</h3>
+    <h4>Trending books:</h4>
     <!-- Top users -->
     <ul>
       <div class="row">
-      <% @books[0..3].each do |book|%>
+      <%random_books = @books.sample(4)%>
+      <% random_books.each do |book|%>
         <div class="col s3">
             <ul>
               <li>
                 <a href="<%=book_path(book)%>">
-                  <div class="card-panel hoverable">
+                  <div class="card-panel hoverable indigo lighten-5">
                     <div class="card-image">
                       <img class="responsive-img" src="<%=book.img_url%>">
                       <span class="card-title">"<%=book.title%>" -- <%= book.author%></span>
@@ -29,17 +30,18 @@
 
   <div class='divider'></div>
   <div class='section'>
-    <h4>Trending curricula</h3>
+    <h4>Trending curricula:</h4>
 
     <!-- Top curricula -->
     <ul>
       <div class="row">
-      <% @curricula[0..3].each do |curriculum|%>
+        <%random_curriculum = @curricula.sample(4)%>
+      <% random_curriculum.each do |curriculum|%>
         <div class="col s3">
             <ul>
               <li>
                 <a href="<%=curriculum_path(curriculum)%>">
-                  <div class="card-panel hoverable">
+                  <div class="card-panel hoverable indigo lighten-5">
                     <div class="card-image">
                       <!-- image should go here -->
                       <img class="responsive-img" src="<%if curriculum.books.empty?%><%=%><%else%><%=curriculum.books.first.img_url%><%end%>">
@@ -57,20 +59,22 @@
   </div>
   <div class='divider'></div>
   <div class='section'>
-    <!-- Top users -->
+    <h4>Trending influencers:</h4>
+
     <ul>
       <div class="row">
-      <% @users[0..3].each do |user|%>
+        <%random_users = @users.sample(4)%>
+      <% random_users.each do |user|%>
         <div class="col s3">
             <ul>
               <li>
                 <a href="<%=user_path(user)%>">
-                  <div class="card-panel hoverable">
+                  <div class="card-panel hoverable indigo lighten-5">
                     <div class="card-image">
                       <!-- image should go here -->
                       <img class="responsive-img" src="<%=user.img_url%>">
 
-                      <span class="card-title"><%=user.name%>></span>
+                      <span class="card-title"><%=user.name%></span>
                     </div>
                   </div>
                 </a>
