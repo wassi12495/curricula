@@ -1,5 +1,5 @@
 class CurriculumsController < ApplicationController
-  skip_before_action :authorized, only: [:index, :show]
+  skip_before_action :authorized, only: [:index]
 
   def index
     @curricula = Curriculum.all
