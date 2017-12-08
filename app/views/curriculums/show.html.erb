@@ -10,7 +10,7 @@
 
   <form action='<%=add_to_lib_path%>' method="get">
     <input type="hidden" name="curriculum_id" value='<%=@curriculum.id%>'>
-    <button class="btn waves-effect waves-light" type="submit" name="action" >
+    <button class="btn waves-effect waves-light indigo lighten-5" type="submit" name="action" >
       <i class="material-icons right">
         <% if @curriculum.followed?(session[:user_id])%>
             <%="Unfollow"%>
@@ -27,7 +27,7 @@
           <ul>
             <li>
               <a href="<%=book_path(book)%>">
-                <div class="card-panel hoverable">
+                <div class="card-panel hoverable indigo lighten-5">
                   <div class="card-image">
                     <img class="responsive-img" src="<%=book.img_url%>">
                     <span class="card-title">"<%=book.title%>" -- <%= book.author%></span>

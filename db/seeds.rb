@@ -60,11 +60,25 @@ twilight = Book.create(title: "Twilight of the Idols", author: "Friedrich Nietzs
 dune = Book.create(title: "Dune", author: "Frank Herbert", year: 1965, publisher: "Chilton Books", subject_id: fic.id, img_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/1/29/1422551324715/2fedfdf2-8c99-4d1a-8ef9-c38aa66aa736-bestSizeAvailable.jpeg?w=300&q=55&auto=format&usm=12&fit=max&s=84104132b468fcf8b81a29710e9bf1b4")
 malcolmx = Book.create(title: "The Autobiography of Malcolm X", author: "Alex Haley and Malcolm X", year: 1965, publisher: "W.W. Norton", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51U0ujmaDAL._SX235_BO1,204,203,200_.jpg")
 
+
+r_of_d = Book.create(title: "The Remains of the Day", author: "Kazuo Ishiguro", year: 1989, publisher: "W.W. Norton", subject_id: fic.id, img_url: "https://images.gr-assets.com/books/1327128714l/28921.jpg")
+creation = Book.create(title: "Creation: Life and How to Make It", author: "Steve Grand", year: 2000, publisher: "Random House", subject_id: cs.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/41xekIE3UVL._SX330_BO1,204,203,200_.jpg")
+blaxk_swan = Book.create(title: "The Black Swan", author: "Nassim Taleb", year: 2000, publisher: "RandomHouse", subject_id: psych.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/41tu1ak888L._SX322_BO1,204,203,200_.jpg")
+
+
 obama_c1 = Curriculum.create(title: "Presidential History", description: "A deep dive into the history of the United States Presidency.", user_id: obama.id)
 jeff_c1 = Curriculum.create(title: "Entrepreneurship ", description: "An Introduction to Entrepreneurship.", user_id: jeff.id)
 greg_c1 = Curriculum.create(title: "How to be A person in the World", description: "These are the books that changed the way I look at myself, others, and the world. I think this is essential reading for everyone.", user_id: greg.id)
 seth_c1 = Curriculum.create(title: "Seth Explains the Stars", description:"I keep a very long list of every book that I have ever read on my phone. Here are a few of my favorites.", user_id: seth.id)
 priyam_c1 = Curriculum.create(title: "Money and Power", description: "You need to read these books!", user_id: priyam.id)
+
+
+CurriculumBook.create(book_id:r_of_d.id, curriculum_id: jeff_c1.id)
+CurriculumBook.create(book_id:creation.id, curriculum_id: jeff_c1.id)
+CurriculumBook.create(book_id:blaxk_swan.id, curriculum_id: jeff_c1.id)
+CurriculumBook.create(book_id:atlas_shrugged.id, curriculum_id: jeff_c1.id)
+CurriculumBook.create(book_id:big_short.id, curriculum_id: jeff_c1.id)
+
 
 
 CurriculumBook.create(book_id:east_of_e.id, curriculum_id: seth_c1.id)
