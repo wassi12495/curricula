@@ -16,7 +16,7 @@ CurriculumBook.destroy_all
 # Users
 obama = User.create(username: "obama", password: "michelle", password_confirmation: "michelle", first_name: "Barack", last_name: "Obama", img_url:"http://internetbusinessmastermind.com/wp-content/uploads/barack-obama-official.jpg", biography: "Barack Hussein Obama II is an American politician who served as the 44th President of the United States from 2009 to 2017.")
 jeff = User.create(username: "amazon", password: "rich", password_confirmation: "rich", first_name: "Jeff", last_name: "Bezos", img_url:"https://ffbsccn.files.wordpress.com/2013/08/jeffbezosceo_lg_jpg_280x280_crop_q95-1.jpg", biography: "Jeffrey Preston Bezos is an American technology and retail entrepreneur, investor, electrical engineer, computer scientist, and philanthropist,[5] best known as the founder, chairman, and chief executive officer of Amazon.com, the world's largest online shopping retailer.")
-josh = User.create(username: "Josh", password: "123", password_confirmation: "123", first_name: "Josh", last_name: "Wasserman")
+josh = User.create(username: "Josh", password: "123", password_confirmation: "123", first_name: "Josh", last_name: "Wasserman", biography: "Competitive sleeper." )
 greg = User.create(username: "GregD", password: "123", password_confirmation: "123", first_name: "Greg", last_name: "Driza", img_url: "https://ibb.co/cai4vG", biography: "Greg Driza is a musician and programmer in NYC.")
 seth = User.create(username: "Seth", password: "123", password_confirmation: "123", first_name: "Seth", last_name: "Barden", img_url: "https://static1.squarespace.com/static/54514ccfe4b02e02b92e7a24/569ea29ea2bab8156eade875/5758aa081d07c0947ef44c12/1469653770499/Seth-48.jpg?format=500w", biography: "Bassist, programmer, philosopher king.")
 priyam = User.create(username: "Priyam", password: "123", password_confirmation: "123", first_name: "Priyam", last_name: "Sarma", img_url: "", biography: "Developer in NYC.")
@@ -60,11 +60,20 @@ twilight = Book.create(title: "Twilight of the Idols", author: "Friedrich Nietzs
 dune = Book.create(title: "Dune", author: "Frank Herbert", year: 1965, publisher: "Chilton Books", subject_id: fic.id, img_url: "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/1/29/1422551324715/2fedfdf2-8c99-4d1a-8ef9-c38aa66aa736-bestSizeAvailable.jpeg?w=300&q=55&auto=format&usm=12&fit=max&s=84104132b468fcf8b81a29710e9bf1b4")
 malcolmx = Book.create(title: "The Autobiography of Malcolm X", author: "Alex Haley and Malcolm X", year: 1965, publisher: "W.W. Norton", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51U0ujmaDAL._SX235_BO1,204,203,200_.jpg")
 
+
+herodotus_1 = Book.create(title: "The Histories", author: "Herodotus", year: -440, publisher: "Purple Turtle Production", subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/61HHV3wB42L._SX332_BO1,204,203,200_.jpg")
+thuc = Book.create(title: "The History of the Peloponnesian War", author: "Thucydides", year: -420, subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/81MWHWs%2Bs-L.jpg")
+ody = Book.create(title: "The Odyssey", author: "Homer", year: -800, subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/51cUwb0DUPL._SY344_BO1,204,203,200_.jpg")
+iliad = Book.create(title: "The Iliad", author: "Homer", year: -800, subject_id: history.id, img_url: "https://images-na.ssl-images-amazon.com/images/I/5182Ntn8jyL._SX331_BO1,204,203,200_.jpg")
+
+
+
 obama_c1 = Curriculum.create(title: "Presidential History", description: "A deep dive into the history of the United States Presidency.", user_id: obama.id)
 jeff_c1 = Curriculum.create(title: "Entrepreneurship ", description: "An Introduction to Entrepreneurship.", user_id: jeff.id)
 greg_c1 = Curriculum.create(title: "How to be A person in the World", description: "These are the books that changed the way I look at myself, others, and the world. I think this is essential reading for everyone.", user_id: greg.id)
 seth_c1 = Curriculum.create(title: "Seth Explains the Stars", description:"I keep a very long list of every book that I have ever read on my phone. Here are a few of my favorites.", user_id: seth.id)
 priyam_c1 = Curriculum.create(title: "Money and Power", description: "You need to read these books!", user_id: priyam.id)
+josh_c1 = Curriculum.create(title: "Ancient Greece", description: "Books about the Ancient World", user_id: josh.id)
 
 
 CurriculumBook.create(book_id:east_of_e.id, curriculum_id: seth_c1.id)
@@ -72,6 +81,11 @@ CurriculumBook.create(book_id:musico.id, curriculum_id: seth_c1.id)
 CurriculumBook.create(book_id:twilight.id, curriculum_id: seth_c1.id)
 CurriculumBook.create(book_id:dune.id, curriculum_id: seth_c1.id)
 CurriculumBook.create(book_id:malcolmx.id, curriculum_id: seth_c1.id)
+
+CurriculumBook.create(book_id:herodotus_1.id, curriculum_id: josh_c1.id)
+CurriculumBook.create(book_id:ody.id, curriculum_id: josh_c1.id)
+CurriculumBook.create(book_id:iliad.id, curriculum_id: josh_c1.id)
+CurriculumBook.create(book_id:thuc.id, curriculum_id: josh_c1.id)
 
 CurriculumBook.create(book_id:freakonomics.id, curriculum_id: priyam_c1.id)
 CurriculumBook.create(book_id:guns_germs.id, curriculum_id: priyam_c1.id)
